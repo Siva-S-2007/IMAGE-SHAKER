@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="shakeimage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script>
+
+        let audio;  // Declare the audio variable globally
+
+        function playSound() {
+            audio = new Audio('mankatha.mp3');  // Initialize the audio object
+            audio.play();  // Play the sound
+            audio.loop = true;  // Loop the sound to keep playing while hovered
+        }
+
+        function stopSound() {
+            if (audio) {
+                audio.pause();  // Pause the sound
+                audio.currentTime = 0;  // Reset the audio to the beginning
+            }
+        }
+ 
+    </script>
+
+
+</head>
+<body>
+
+    <img src="virat.jpg" alt="Viratkohli" width="300" height="300" 
+         onmouseover="playSound()" onmouseout="stopSound()">
+</body>
+</html>
